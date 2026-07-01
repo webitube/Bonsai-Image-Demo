@@ -12,6 +12,9 @@ dependencies = [
     # around 10-20 MB/s. Gated on by HF_HUB_ENABLE_HF_TRANSFER=1 (set in
     # scripts/download_model.sh).
     "hf-transfer",
+    # GGUF export: scripts/export_gguf.py writes .gguf files with ternary/binary
+    # quantization for browser-side loading via the web-txt2img GGUF parser.
+    "gguf",
     # macOS path: in-process MLX via prism-image-studio (pulls mflux + mlx).
     "mflux>=0.17.0 ; sys_platform == 'darwin'",
     "prism-image-studio ; sys_platform == 'darwin'",
